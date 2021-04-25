@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Trabalho de Topicos</string>
+    <string name="email">Email</string>
+    <string name="date_formatter">dd/MM/yyyy</string>
+    <string name="error_required_field">Campo obrigatorio</string>
+    <string name="error_name_field">o nome deve ter entre 3 e 20 caracteres</string>
+    <string name="error_phone_field">o telefone deve ter 13 caracteres</string>
+    <string name="error_birthday_field">eA data de nascimento deve ter 10 caracteres</string>
+    <string name="error_birth_field">A data de nascimento deve ter 10 caracteres</string>
+    <string name="error_email_field">email invalido</string>
+</resources>
