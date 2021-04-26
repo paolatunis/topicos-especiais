@@ -1,7 +1,7 @@
 package com.example.exercicio2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.ListActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Product selectedProduct = products.get(position);
 
-                Intent intentDelete = new Intent(MainActivity.this, DeleteProduct.class);
+                Intent intentDelete = new Intent(MainActivity.this, FormProduct.class);
                 intentDelete.putExtra("selecionado", selectedProduct);
                 startActivity(intentDelete);
             }

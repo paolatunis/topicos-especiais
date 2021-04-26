@@ -3,7 +3,6 @@ package com.example.exercicio2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,7 +13,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DeleteProduct extends AppCompatActivity {
+public class FormProduct extends AppCompatActivity {
     private EditText et_name;
     private EditText et_description;
     private EditText et_image;
@@ -46,16 +45,16 @@ public class DeleteProduct extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if (response.isSuccessful()) {
-                            Intent intentDelete = new Intent(DeleteProduct.this, MainActivity.class);
+                            Intent intentDelete = new Intent(FormProduct.this, MainActivity.class);
                             startActivity(intentDelete);
                         } else {
-                            Toast.makeText(DeleteProduct.this, "Erro ao deletar", Toast.LENGTH_LONG).show();
+                            Toast.makeText(FormProduct.this, "Erro ao deletar", Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
-                        Toast.makeText(DeleteProduct.this, "Erro no servidor", Toast.LENGTH_LONG).show();
+                        Toast.makeText(FormProduct.this, "Erro no servidor", Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -76,16 +75,16 @@ public class DeleteProduct extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Product> call, Response<Product> response) {
                         if(response.isSuccessful()){
-                            Intent intent = new Intent(DeleteProduct.this, MainActivity.class);
+                            Intent intent = new Intent(FormProduct.this, MainActivity.class);
                             startActivity(intent);
                         }else{
-                            Toast.makeText(DeleteProduct.this, "Erro ao editar", Toast.LENGTH_LONG).show();
+                            Toast.makeText(FormProduct.this, "Erro ao editar", Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Product> call, Throwable t) {
-                        Toast.makeText(DeleteProduct.this, "Erro no servidor", Toast.LENGTH_LONG).show();
+                        Toast.makeText(FormProduct.this, "Erro no servidor", Toast.LENGTH_LONG).show();
                     }
                 });
             }

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Exercicio2"
         android:usesCleartextTraffic="true">
         <activity android:name=".ProductActivity" />
-        <activity android:name=".DeleteProduct" />
+        <activity android:name=".FormProduct" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
